@@ -1,0 +1,43 @@
+AI Prompts Used
+AI was used as a support tool during model development, debugging, validation,
+and documentation. The following are examples of key prompts that helped
+accelerate the project.
+
+1. Feature Engineering
+"How can I convert the `closestdefapproach` column, which contains four
+defender-distance measurements stored as a string, into four numeric features
+that can be used in an R model?"
+
+2. Model Development
+"How can I compare a naive baseline, logistic regression models, and XGBoost
+for predicting basketball shot make probability using log-loss?"
+
+3. Train/Test Consistency
+"My XGBoost training matrix and testing matrix need to have exactly the same
+features. How can I create the testing model matrix using the training formula
+and verify that the column names match?"
+
+4. Debugging Missing Values
+"My testing data contains missing values in some defensive variables and
+`model.matrix()` is dropping rows. How can I preserve every testing row while
+creating predictions with XGBoost?"
+
+5. Debugging Duplicate Features
+"I accidentally created duplicate `approach_100`, `approach_075`,
+`approach_050`, and `approach_025` columns while preparing the testing data.
+How can I identify and remove the duplicate columns before rebuilding them?"
+
+6. Model Evaluation
+"How can I create a calibration plot comparing predicted shot probabilities
+with actual make rates to determine whether my XGBoost probabilities are
+well calibrated?"
+
+7. Basketball Interpretation
+"How can I compare predicted and actual shot make probability across
+two-foot shot-distance bins to check whether the model behaves realistically?"
+
+8. Feature Importance
+"How should I interpret XGBoost feature importance by gain, especially if
+shot distance, closest-defender distance, contest status, and shot type are
+the most important variables?"
+
